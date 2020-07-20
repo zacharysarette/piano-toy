@@ -2,6 +2,11 @@
   <div
     v-touch:start="pressKey"
     v-touch:end="releaseKey"
+    v-touch:moving="releaseKey"
+    @mousedown="pressKey"
+    @mouseup="releaseKey"
+    @mouseleave="releaseKey"
+    @mousemove="releaseKey"
     :class="keyType === 'black' ? 'blackKey': ''"
   >
     <span>{{ keyName }}</span>
@@ -16,8 +21,6 @@ export default {
     keyType: String,
     synth: Object,
     tone: Function
-  },
-  computed: {
   },
   methods: {
     async pressKey () {
@@ -40,7 +43,7 @@ div {
   text-align: center;
   background:#fef6e9;
 }
-div:hover {
+div.active {
   background:#f5af77;
 }
 .blackKey {
@@ -67,7 +70,7 @@ span {
     background:#fef6e9;
     vertical-align: bottom;
   }
-  div:hover {
+  div.active {
     background:#f5af77;
   }
   .blackKey {
