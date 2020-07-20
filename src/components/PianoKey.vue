@@ -5,7 +5,6 @@
     v-touch:moving="releaseKey"
     :class="keyType === 'black' ? 'blackKey': ''"
   >
-    <span>{{ keyName }}</span>
   </div>
 </template>
 <script>
@@ -52,10 +51,6 @@ div.active {
   height: 120px;
   z-index: 10;
 }
-span {
-  position:relative;
-  top: 80%;
-}
 @media only screen and (max-width: 600px) {
   div {
     width:100%;
@@ -80,13 +75,6 @@ span {
     background: #4f3235;
     color:#fef6e9;
     vertical-align: middle;
-  }
-  span {
-    float:right;
-    position:relative;
-    text-align: left;
-    font-size: 20px;
-    top:40%;
   }
 }
 </style>
