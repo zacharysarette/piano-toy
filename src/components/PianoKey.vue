@@ -38,9 +38,6 @@ div {
   text-align: center;
   background:#fef6e9;
 }
-div.active {
-  background:#f5af77;
-}
 .blackKey {
   position:relative;
   bottom:80px;
@@ -55,6 +52,8 @@ div.active {
 }
 @media only screen and (max-width: 600px) {
   div {
+    position:relative;
+    top:0px;
     width:100%;
     height: 80px;
     margin-bottom:0px;
@@ -62,12 +61,11 @@ div.active {
     background:#fef6e9;
     vertical-align: bottom;
   }
-  div.active {
-    background:#f5af77;
-  }
   .blackKey {
-    display: block;
+    clear:both;
+    display: inline-block;
     float:right;
+    border-bottom:0px;
     margin-left: 0px;
     margin-right: 0px;
     margin-bottom:-25px;
@@ -78,5 +76,10 @@ div.active {
     color:#fef6e9;
     vertical-align: middle;
   }
+}
+</style>
+<style>
+.active {
+  background:#f5af77;
 }
 </style>
