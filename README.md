@@ -2,7 +2,7 @@
 
 | __Desktop__ | __Mobile__ |
 | --- | --- |
-| <img width="300" src="./screenshots/PianoToyDeskTopScreenShot.PNG" alt="Piano Toy Desktop Screen Shot"/> | <img width="300" src="./screenshots/PianoToyMobileScreenShot.PNG" alt="Piano Toy Mobile Screen Shot"/> |
+| <img height="200" src="./screenshots/PianoToyDeskTopScreenShot.PNG" alt="Piano Toy Desktop Screen Shot"/> | <img height="200" src="./screenshots/PianoToyMobileScreenShot.PNG" alt="Piano Toy Mobile Screen Shot"/> |
 
 ## Project setup
 ```
