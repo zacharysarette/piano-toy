@@ -3,10 +3,6 @@
     v-touch:start="pressKey"
     v-touch:end="releaseKey"
     v-touch:moving="releaseKey"
-    @mousedown="pressKey"
-    @mouseup="releaseKey"
-    @mouseleave="releaseKey"
-    @mousemove="releaseKey"
     :class="keyType === 'black' ? 'blackKey': ''"
   >
     <span>{{ keyName }}</span>
@@ -57,8 +53,7 @@ div.active {
   z-index: 10;
 }
 span {
-  display: inline-block;
-  position: relative;
+  position:relative;
   top: 80%;
 }
 @media only screen and (max-width: 600px) {
@@ -87,12 +82,11 @@ span {
     vertical-align: middle;
   }
   span {
-    float:left;
+    float:right;
     position:relative;
     text-align: left;
-    font-size: 26px;
-    top:30%;
-    left:30px;
+    font-size: 20px;
+    top:40%;
   }
 }
 </style>
