@@ -28,25 +28,9 @@ export default {
     eventBus.$on('turnOn', (data) => {
       this.turnOn()
     })
-    this.synth.set(this.synthSettings)
   },
   data () {
     return {
-      synthSettings:
-        {
-          oscillator: {
-            type: 'triangle8',
-            modulationType: 'sawtooth',
-            modulationIndex: 3,
-            harmonicity: 3.4
-          },
-          envelope: {
-            attack: 1,
-            decay: 1,
-            sustain: 0.4,
-            release: 4
-          }
-        },
       synth: new Tone.PolySynth(4, this.synthVoice).toMaster(),
       tone: Tone,
       notes: getTotalNotes()
