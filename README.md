@@ -1,4 +1,4 @@
-# piano-garden
+# piano-toy
 
 | __Desktop__ | __Mobile__ |
 | --- | --- |
