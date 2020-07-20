@@ -31,7 +31,7 @@ export default {
   },
   data () {
     return {
-      synth: new Tone.PolySynth(4, this.synthVoice).toMaster(),
+      synth: new Tone.PolySynth(4, Tone.synth).toMaster(),
       tone: Tone,
       notes: getTotalNotes()
     }
