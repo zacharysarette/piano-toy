@@ -1,7 +1,11 @@
 <template>
-  <button @mousedown="pressKey" @mouseup="releaseKey" @mouseleave="releaseKey" :class="keyType === 'black' ? 'blackKey': ''">
+  <div
+    v-touch:start="pressKey"
+    v-touch:end="releaseKey"
+    :class="keyType === 'black' ? 'blackKey': ''"
+  >
     <span>{{ keyName }}</span>
-  </button>
+  </div>
 </template>
 <script>
 
@@ -26,14 +30,17 @@ export default {
 }
 </script>
 <style scoped>
-button {
+div {
+  display: inline-block;
   width:40px;
+  height: 200px;
   padding:0px;
+  border-bottom:1px solid #64585c;
+  border-right:1px solid #64585c;
   text-align: center;
   background:#fef6e9;
-  height: 200px
 }
-button:hover {
+div:hover {
   background:#f5af77;
 }
 .blackKey {
@@ -44,17 +51,15 @@ button:hover {
   color:#fef6e9;
   width: 30px;
   height: 120px;
-  vertical-align:top;
   z-index: 10;
 }
 span {
-  position:relative;
-  text-align: center;
-  font-size: 16px;
-  bottom:-40px;
+  display: inline-block;
+  position: relative;
+  top: 80%;
 }
 @media only screen and (max-width: 600px) {
-  button {
+  div {
     width:100%;
     height: 80px;
     margin-bottom:0px;
@@ -62,7 +67,7 @@ span {
     background:#fef6e9;
     vertical-align: bottom;
   }
-  button:hover {
+  div:hover {
     background:#f5af77;
   }
   .blackKey {
@@ -83,8 +88,8 @@ span {
     position:relative;
     text-align: left;
     font-size: 26px;
+    top:30%;
     left:30px;
-    bottom:0px;
   }
 }
 </style>
