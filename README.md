@@ -1,4 +1,4 @@
-# piano-garden
+# piano-toy
 
 ## Project setup
 ```
