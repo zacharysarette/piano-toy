@@ -43,9 +43,11 @@ div.active {
 }
 .blackKey {
   position:relative;
+  bottom:80px;
   margin-right:-15px;
   margin-left:-15px;
   background: #4f3235;
+  border-right:0px;
   color:#fef6e9;
   width: 30px;
   height: 120px;
