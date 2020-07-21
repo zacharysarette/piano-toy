@@ -51,6 +51,9 @@ div {
   text-align: center;
   background:#fef6e9;
 }
+div:hover {
+  background: rgb(243, 170, 150);
+}
 .blackKey {
   position:relative;
   bottom:80px;
@@ -90,10 +93,5 @@ div {
     color:#fef6e9;
     vertical-align: middle;
   }
-}
-</style>
-<style>
-.activeKey {
-  background: red
 }
 </style>

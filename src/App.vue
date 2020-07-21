@@ -24,10 +24,12 @@ export default {
     TopBar,
     PianoKey
   },
-  created () {
+  async created () {
     eventBus.$on('turnOn', (data) => {
       this.turnOn()
     })
+    await this.tone.start()
+    this.synth.triggerAttackRelease(['C4', 'E3', 'G3'], '2n')
   },
   data () {
     return {
