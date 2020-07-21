@@ -19,6 +19,7 @@ export default {
   },
   methods: {
     async pressKey () {
+      await this.tone.start()
       this.synth.triggerAttack(this.keyName)
     },
     async releaseKey () {
@@ -33,6 +34,7 @@ div {
   width:40px;
   height: 200px;
   padding:0px;
+  border-radius:0 0 8px 8px;
   border-bottom:1px solid #64585c;
   border-right:1px solid #64585c;
   text-align: center;
@@ -56,6 +58,7 @@ div {
     top:0px;
     width:100%;
     height: 80px;
+    border-radius:16px 0 0 16px;
     margin-bottom:0px;
     text-align: right;
     background:#fef6e9;
@@ -79,7 +82,7 @@ div {
 }
 </style>
 <style>
-.active {
-  background:#f5af77;
+.activeKey {
+  background: red
 }
 </style>
