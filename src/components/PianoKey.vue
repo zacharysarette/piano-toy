@@ -33,7 +33,7 @@ export default {
       await this.tone.start()
       this.playKey()
     },
-    async releaseKey () {
+    releaseKey () {
       this.synth.triggerRelease(this.keyName)
     },
     playKey () {
