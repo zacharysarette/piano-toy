@@ -31,10 +31,13 @@ export default {
   methods: {
     async pressKey () {
       await this.tone.start()
-      await this.synth.triggerAttack(this.keyName)
+      this.playKey()
     },
     async releaseKey () {
       this.synth.triggerRelease(this.keyName)
+    },
+    playKey () {
+      this.synth.triggerAttack(this.keyName)
     }
   }
 }
