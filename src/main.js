@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 import Vue2TouchEvents from 'vue2-touch-events'
+import VueMobileDetection from 'vue-mobile-detection'
 Vue.config.productionTip = false
+Vue.use(VueMobileDetection)
 Vue.use(Vue2TouchEvents, {
   disableClick: true,
   touchClass: 'activeKey',

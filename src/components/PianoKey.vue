@@ -1,8 +1,19 @@
 <template>
-  <div
+  <div v-if="$isMobile()"
     v-touch:start="pressKey"
     v-touch:end="releaseKey"
     v-touch:moving="releaseKey"
+    @mouseup="releaseKey"
+    @mouseout="releaseKey"
+    @mouseleave="releaseKey"
+    :class="keyType === 'black' ? 'blackKey': ''"
+  >
+  </div>
+  <div v-else
+    @mousedown="pressKey"
+    @mouseup="releaseKey"
+    @mouseout="releaseKey"
+    @mouseleave="releaseKey"
     :class="keyType === 'black' ? 'blackKey': ''"
   >
   </div>
