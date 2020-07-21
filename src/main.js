@@ -7,7 +7,7 @@ Vue.use(VueMobileDetection)
 Vue.use(Vue2TouchEvents, {
   disableClick: true,
   touchClass: 'activeKey',
-  tapTolerance: 20,
+  tapTolerance: 5,
   touchHoldTolerance: 400,
   swipeTolerance: 30,
   longTapTimeInterval: 400
