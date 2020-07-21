@@ -6,7 +6,7 @@ Vue.config.productionTip = false
 Vue.use(VueMobileDetection)
 Vue.use(Vue2TouchEvents, {
   disableClick: true,
-  tapTolerance: 2,
+  tapTolerance: 6,
   touchHoldTolerance: 400,
   swipeTolerance: 30,
   longTapTimeInterval: 400
