@@ -31,7 +31,7 @@ export default {
   methods: {
     async pressKey () {
       await this.tone.start()
-      this.synth.triggerAttack(this.keyName)
+      await this.synth.triggerAttack(this.keyName)
     },
     async releaseKey () {
       this.synth.triggerRelease(this.keyName)
